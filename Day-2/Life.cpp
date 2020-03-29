@@ -19,8 +19,11 @@ bool check_prev(int* arr, int* ans, int n)
     int i,j;
     for(i = 2;i < n; i++)
         ans[i] = ans[i-1]^ans[i-2]^arr[i-1]; 
-    if (ans[n-2]^ans[n-1]^ans[0]^arr[n-1]) return false;
-    if (ans[n-1]^ans[0]^ans[1]^arr[0]) return false;
+    if (ans[n-2]^ans[n-1]^ans[0]^arr[n-1])      //Verifying first element
+        return false;
+    if (ans[n-1]^ans[0]^ans[1]^arr[0])          //Verifying last element
+        return false;
+    
     return true;
 }
 

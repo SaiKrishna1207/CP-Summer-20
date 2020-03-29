@@ -20,6 +20,12 @@ void solve(vector<long> rating, int n)
         else
             candies[i] = 1;
     }
+
+    // for(i = 0;i < n;i++)
+    // {
+    //     cout << candies[i] << " " << endl;
+    // }
+
     for(i = n-2; i >= 0 ; i--)
     {
         if(rating[i]>rating[i+1] && candies[i] <= candies[i+1])
@@ -28,6 +34,7 @@ void solve(vector<long> rating, int n)
        
     for(i = 0;i < n;i++)
     {
+        //cout << candies[i] << " " << endl;
         sum += candies[i];
     }
     cout<<sum<<endl;
