@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 
 using namespace std;
- 
-int maxProfit(vector<int>& prices) 
-{
+
 // 7 1 5 3 6 4
 /* i = 3   k = 5   profit= 1   bought = true
 */
+int maxProfit(vector<int>& prices) 
+{
     int i, j, k;
     bool bought = false;
     int n = prices.size();
@@ -16,9 +16,9 @@ int maxProfit(vector<int>& prices)
         k = i+1;
         if(bought == false)
         {
-            while(prices[k-1] > prices[k] && k < n)
+            while(k < n && prices[k-1] > prices[k])
                 k++;
-            if(k >= n - 1)
+            if(k > n-1)
                 return profit;
             else
             {
@@ -28,11 +28,11 @@ int maxProfit(vector<int>& prices)
         }
         else
         {
-            while(prices[k - 1] < prices[k] && k < n)
+            while(k < n && prices[k-1] < prices[k])
                 k++;
-            if(k >= n - 1)
+            if(k >= n-1)
             {
-                profit += prices[k - 1];
+                profit += prices[k-1];
                 return profit;
             }
             else
@@ -45,6 +45,7 @@ int maxProfit(vector<int>& prices)
     }
     return profit;
 }
+
 
 int main()
 {
