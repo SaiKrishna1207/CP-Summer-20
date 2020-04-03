@@ -2,29 +2,31 @@
 
 using namespace std;
 
-bool sidesSum(vector<int> & arr, int mid, long sum)
+int sidesSum(vector<int> & arr, int mid, long long sum)
 {
-    int i, j, diff;
-    long sumL;
-    for(i = 0;i < mid;i++)
+    int i, j, flag = 0;
+    long long sumL = 0;
+    for(i = 0;i < mid; i++)
+        sumL += arr[i];
+    for(i = 0;i < mid; i++)
     {
-        sumL = 0;
-        for(j = 0;j < mid; j++)
-        {
-            if(j != i)
-                sumL += arr[j];
-        }
+        sumL -= arr[i];
         if(sumL == sum/2)
-            return true;
+            return 0;
+        else if(sumL > sum/2)
+            flag++;
+        sumL += arr[i];
     }
-    return false;
+    if(flag == mid)
+        return -1;
+    return 1;
 }
 
 int main()
 {
     int i, n, k, flag = 0, a, b;
-    long sum = 0;
-    bool kk;
+    long long sum = 0;
+    int kk;
     cin >> n;
     vector<int> arr;
     for(i = 0;i < n; i++)
@@ -38,20 +40,23 @@ int main()
         cout << "NO" << endl;
         return 0;
     }
-    //2 2 3 4 5 
+    //1 5 6 8 3 1 7 3
+    //3 7 1 3 8 6 5 1 
     int low = 0, high = n;
     while(low <= high)
     {
         int mid = low + (high-low)/2;
         kk = sidesSum(arr, mid, sum);
-        if(kk)
+        if(kk == 0)
         {
             flag = 1;
             cout << "YES" << endl;
             break;
         }
-        else 
-            low = mid + 1;       
+        else if(kk == 1)
+            low = mid + 1;
+        else
+            high = mid - 1;           
     }
     reverse(arr.begin(), arr.end());
     low = 0, high = n;
@@ -61,19 +66,19 @@ int main()
         {
             int mid = low + (high-low)/2;
             kk = sidesSum(arr, mid, sum);
-            if(kk)
+            if(kk == 0)
             {
                 flag = 1;
                 cout << "YES" << endl;
                 break;
             }       
-            else
+            else if(kk == 1)
                 low = mid + 1;
+            else
+                high = mid - 1;
         }
     }
     if(flag == 0)
-    {
         cout << "NO" << endl;
-    }
     return 0;
 }
