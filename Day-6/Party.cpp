@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int solve(unordered_map<int,vector<int>>& m, int t)
+int dfs(unordered_map<int,vector<int>>& m, int t)
 {
     int j, h, max1 = 0;
     vector<int> a = m[t];
@@ -10,7 +10,7 @@ int solve(unordered_map<int,vector<int>>& m, int t)
         return 0;
     for(j = 0; j < a.size(); j++)
     {
-        h = solve(m, a[j]);
+        h = dfs(m, a[j]);
         if(h > max1)
             max1 = h;
     }
@@ -31,7 +31,7 @@ int main()
     vector<int> roots = m[-1];
     for(i = 0;i < roots.size(); i++)
     {
-        x = solve(m, roots[i]);
+        x = dfs(m, roots[i]);
         if(x > max)
             max = x;
     }
