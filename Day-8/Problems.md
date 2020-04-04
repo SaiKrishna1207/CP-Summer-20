@@ -9,6 +9,6 @@ https://codeforces.com/contest/1183/problem/C
 # Segments Removal **(INCOMPLETE)**
 https://codeforces.com/contest/899/problem/E
 
-# Array Division   **(TEST 77)**
+# Array Division   
 https://codeforces.com/contest/808/problem/D
 
