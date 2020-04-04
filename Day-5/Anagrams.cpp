@@ -42,8 +42,7 @@ int main()
     {
         count = 0;
         cin >> str;
-        sublen++;
-        for(k = 1;k < str.length(); k++)
+        for(sublen = 1;sublen < str.length(); sublen++)
         {
             for(i = 0;i < str.length() - sublen; i++)
             {

@@ -6,9 +6,9 @@
 # Computer Game
 https://codeforces.com/contest/1183/problem/C
 
-# Segments Removal
+# Segments Removal **(INCOMPLETE)**
 https://codeforces.com/contest/899/problem/E
 
-# Array Division
+# Array Division   **(TEST 77)**
 https://codeforces.com/contest/808/problem/D
 

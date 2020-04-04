@@ -6,4 +6,4 @@
 
 2. https://www.interviewbit.com/problems/painters-partition-problem/
 
-3. https://codeforces.com/contest/1287/problem/C
+3. https://codeforces.com/contest/1287/problem/C **(INCOMPLETE)**

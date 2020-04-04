@@ -2,7 +2,7 @@ Day-1 : 27-03-2020
 
 Questions: Suhas
 
-Three Arrays - Data Structures (CodeForces):
+Three Arrays - Data Structures (CodeForces): **(INCOMPLETE)**
 
 https://codeforces.com/problemset/problem/392/D
 
