@@ -3,20 +3,6 @@
 using namespace std;
 
 unordered_map<int, int> m;
-int c = 0;
-
-void find_connected(int n, int i, int* visited)
-{
-    if(visited[i] == 0)
-    {
-        visited[i] = 1;
-        if(i != m[i])
-            find_connected(n, m[i], visited);
-        else
-            c++;
-    }
-    
-}
 
 int find(int l) 
 { 
@@ -34,7 +20,7 @@ void uni(int a, int b)
 
 int main()
 {
-    int n, k, i, in1, in2;
+    int n, k, i, in1, in2, c = 0;
     cin >> n >> k;
     vector<pair<int, int>> flavours; 
     for(i = 0;i < k; i++)
@@ -53,7 +39,10 @@ int main()
     }
     int visited[n+1] = {0};
     for(i = 1;i <= n; i++)
-        find_connected(n, i, visited);
+    {
+        if(m[i] == i)                   // All root elements of the disjoint sets belong to separate connected components. Hence just finding them.
+            c++;
+    }
     int ans = k - (n - c); 
     cout << ans << endl;
     return 0;
