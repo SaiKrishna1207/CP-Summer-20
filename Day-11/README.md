@@ -6,4 +6,4 @@
 
 2. https://codeforces.com/problemset/problem/6/C
 
-3. https://codeforces.com/problemset/problem/6/E
+3. https://www.hackerrank.com/challenges/bowling-pins/problem
