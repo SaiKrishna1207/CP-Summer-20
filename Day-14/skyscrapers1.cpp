@@ -6,28 +6,28 @@ int main()
 {
 	long long n;
     cin>>n;
-    long long a[n], i, maxm=0, ele, sum=0, j, x;
+    long long max[n], i, maxm=0, ele, sum=0, j, x;
 	for(i = 0;i < n; i++)
-        cin >> a[i];
+        cin >> max[i];
     vector<long long> arr[n];
 	for(i = 0;i < n; i++)
 	{
-		ele = a[i];
+		ele = max[i];
 		sum += ele;
 		for(j = i - 1;j >= 0; j--)
 		{
-            if(a[j] < ele)
-                ele=a[j];
+            if(max[j] < ele)
+                ele = max[j];
             sum += ele;
             arr[i].push_back(ele);
 		}
 		reverse(arr[i].begin(),arr[i].end());
-		ele = a[i];
+		ele = max[i];
 		arr[i].push_back(ele);
 		for(j = i + 1;j < n;j++)
 		{
-            if(a[j] < ele)
-                ele = a[j];
+            if(max[j] < ele)
+                ele = max[j];
             sum += ele;
             arr[i].push_back(ele);
 		}
