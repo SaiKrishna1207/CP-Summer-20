@@ -10,6 +10,6 @@ https://codeforces.com/problemset/problem/1313/C1
 
 https://codeforces.com/problemset/problem/24/A
 
-# (3) Equal Average : Interviewbit
+# (3) Equal Average : Interviewbit (INCOMPLETE)
 
 https://www.interviewbit.com/problems/equal-average-partition/
