@@ -5,10 +5,13 @@ public:
         int m = flights.size();
         int adj[n][n];
         priority_queue<pair<int, int>> pq;
-        int i, j, k, u, v;
-        int dist[n];
+        int i, j, k;
+        int dist[n], k_value[n];
         for(i = 0;i < n; i++)
-            dist[i] = INT_MAX;       
+        {
+            k_value[i] = -1;
+            dist[i] = INT_MAX;
+        }
         dist[src] = 0;
         for(i = 0;i < n; i++)
         {
@@ -16,14 +19,12 @@ public:
                 adj[i][j] = 0;
         }
         for(i = 0;i < flights.size(); i++)
-        {
             adj[flights[i][0]][flights[i][1]] = flights[i][2];
-        }
-        
         pq.push(make_pair(0, src));
+        k_value[src] = K;
         while(!pq.empty())
         {
-            if(K == 0)
+            if(k_value[pq.top().second] == 0)
             {
                 while(!pq.empty())
                 {
@@ -33,7 +34,13 @@ public:
                     if(x == dst)
                         return dist[x];
                     if(adj[x][dst] != 0)
-                        return dist[x] + adj[x][dst];
+                    {
+                        int d = dist[x] + adj[x][dst];
+                        if(d < dist[dst])
+                            return d;
+                        else
+                            return dist[dst];
+                    }
                 }
                 if(pq.empty())
                     return -1;
@@ -45,18 +52,22 @@ public:
             {
                 if(i != j && adj[i][j] != 0)
                 {
-                    int d = ((-1) * (a.first)) + adj[i][j];
+                    int d = dist[i] + adj[i][j];
                     if(d < dist[j])
                     {
                         dist[j] = d;
                         pq.push(make_pair((-1) * dist[j], j));
+                        k_value[j] = k_value[i] - 1;
                     }
                 }
             }
-            if(pq.empty())
-                return -1;
-            K--;
+            cout << endl;
+            for(k = 0;k < n; k++)
+                cout << dist[k] << " ";
+            cout << endl;
          }
-         return dist[dst];
+        if(dist[dst] == INT_MAX)
+            return -1;
+        return dist[dst];
     }   
 };
