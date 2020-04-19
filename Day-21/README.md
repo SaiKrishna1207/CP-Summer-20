@@ -8,5 +8,5 @@ https://codeforces.com/problemset/problem/1335/D
 # 2. Middle-Class:
 https://codeforces.com/problemset/problem/1334/B
 
-# 3. Prefix-Suffix Palindrome:
+# 3. Prefix-Suffix Palindrome: (INCOMPLETE)
 https://codeforces.com/problemset/problem/1326/D1
