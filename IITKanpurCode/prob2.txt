@@ -1,0 +1,32 @@
+Problem Statement
+Aaryan thinks he can get a job of Rs. 1 crore per annum by solving CP problems. He has N problems and he has assigned a difficulty level (Di) to each problem. If he solves a problem of difficulty X, his annual salary will increase by Rs. X. However, he cannot solve a problem if he hasn't already solved all the problems whose difficulty level is strictly less than the difficulty of that problem. Find out the minimum number of problems he will have to solve to get an annual salary of at least Rs. 1 crore, or say if it is not possible for Aaryan to get such a salary.
+
+Constraints:
+
+1 <= N <= 10^5
+1 <= Di <= 10^9
+
+ 
+
+Input Format
+The first line contains a single integer N. The second line contains N space separated integers Di (1 <= i <= N).
+
+Output Format
+The output contains a single line containing a single integer.
+If it is not possible for Aaryan to get an annual salary of Rs 1 crore, print -1
+Otherwise, print a single integer: the minimum number of problems Aaryan needs to solve.
+
+
+
+Sample Testcase #0
+Testcase Input
+1
+10000000
+Testcase Output
+1
+Sample Testcase #1
+Testcase Input
+7
+1 22 333 4444 55555 6666666 7777777
+Testcase Output
+7

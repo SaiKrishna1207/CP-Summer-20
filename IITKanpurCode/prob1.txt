@@ -1,0 +1,38 @@
+Problem Statement
+Darshi has N girlfriends, which are identified by an integer Ai (1 <= i <= N). Each girlfriend thinks she is his only girlfriend and would break up with him if she discovers he has multiple girlfriends.
+
+Unfortunately, one girlfriend, identified by the integer Ak, has found out a list of all his girlfriends. She wants to break up with him. She also wants to spread this news to her friends so that they may break up with him too.
+
+Two girls are friends if the binary AND operation of their identification numbers are non zero. Thus, girls identified by Ax and Ay are friends if (Ax & Ay) != 0.
+
+If some girl gets to know about his multiple girlfriends from a friend, she can spread the news to her other friends.
+
+In the end, each girl that got to know about his multiple girlfriends would break up with him. Find out how many girlfriends Darshi will still have after this news is spread.
+
+Constraints:
+
+1 <= N <= 10^5
+1 <= k <= N
+1 <= Ai <= 10^9 (Ai != Aj for any (i,j) such that 1 <= i < j <= N)
+
+Input Format
+The first line contains two space-separated integers N and k. The second line contains N space-separated integers Ai (1 <= i <= N).
+
+Output Format
+Print a single line containing a single integer - the number of girlfriends Darshi will still have after the news spreads.
+
+Sample Testcase #0
+Testcase Input
+4 3
+3 2 1 4
+Testcase Output
+1
+Explanation
+Girlfriend number 3 initially finds out about Darshi's multiple girlfriends. Her identification number is 1. She can spread the news to girlfriend with the identification number 3, because (1&3) = 1 != 0. She cannot spread the news to any other girl. Girlfriend with the identification number 3 can spread the news to the girl with identification number 2. The girl with the identification number 4 will never get to know about this news. So girls with the identification numbers 1,3,2 will break up with him, while the girl with the identification number 4 still remains friends with him. At the end, he still has one girlfriend.
+
+Sample Testcase #1
+Testcase Input
+5 2
+5 4 3 2 1
+Testcase Output
+0
