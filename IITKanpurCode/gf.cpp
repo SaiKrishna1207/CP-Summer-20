@@ -26,7 +26,7 @@ int main() {
         {
             if(i == j)
                 continue;
-            if(gf[i]&gf[j] != 0 && !visited[i])
+            if(((gf[i]&gf[j]) != 0) && !visited[i])
                 q.push(i);
         }
     }
