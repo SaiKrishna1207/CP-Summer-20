@@ -11,12 +11,13 @@ public:
         for(i = 0;i < l - 9; i++)
         {
             sub = s.substr(i, 10);
-            m[sub]++;
-        }
-        for(auto i : m)
-        {
-            if(i.second > 1)
-                ans.push_back(i.first);
+            if(!m[sub])
+                m[sub] = 1;
+            else if(m[sub] == 1)
+            {
+                m[sub] = 2;
+                ans.push_back(sub);
+            }
         }
         return ans;
     }
