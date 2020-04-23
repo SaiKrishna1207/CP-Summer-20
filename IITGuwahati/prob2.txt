@@ -1,0 +1,34 @@
+Astolfo is bored of staying at home all the time, so he decides to solve a problem to keep himself busy.
+
+Astolfo has an string T , consisting of only lowercase latin letters, which he likes. He defines a special string as a string S , which consists of only lowercase latin letters, and has T  as a substring, i.e., there exist some non-negative integers a  and b  where if we remove  a letters from the start of S  and b letters from the end of S , then S=T.
+
+You are given an integer n  and a string T . You have to help Astolfo in solving his problem by finding the number of special strings of length n. Since this number might be large, compute it modulo 10^9 +7 
+
+Constraints:
+
+1<=n<=10^18
+
+1<=length(T)<=50
+
+Input Format
+First-line contains the integer n
+
+Second-line contains the string T
+
+Output Format
+Output the number of special strings modulo 10^9+7
+
+
+
+Sample Testcase #0
+Testcase Input
+5
+abcde
+Testcase Output
+1
+Sample Testcase #1
+Testcase Input
+5
+aaaa
+Testcase Output
+51
