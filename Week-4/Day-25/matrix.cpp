@@ -4,13 +4,13 @@ using namespace std;
 
 vector<string> split_string(string);
 
-bool sortcol( const vector<int>& v1, 
-               const vector<int>& v2 ) { 
- return v1[2] > v2[2]; 
-} 
+bool sortcol( const vector<int>& v1,
+               const vector<int>& v2 ) {
+ return v1[2] > v2[2];
+}
 
 bool FindMachine(int x, unordered_map<int, vector<int>> & m, bool* machPres)
-{  
+{
     int i;
     if(!m[x].size())
         return false;
@@ -21,7 +21,7 @@ bool FindMachine(int x, unordered_map<int, vector<int>> & m, bool* machPres)
         if(FindMachine(m[x][i], m, machPres))
             return true;
     }
-    return false; 
+    return false;
 }
 
 
@@ -45,7 +45,7 @@ int minTime(vector<vector<int>> roads, vector<int> machines) {
         }
         else if(machPres[roads[i][0]] && machPres[roads[i][1]])
             ans += roads[i][2];
-        
+
         else if(machPres[roads[i][0]] && !machPres[roads[i][1]])
         {
             if(FindMachine(roads[i][1], m, machPres))
@@ -56,9 +56,9 @@ int minTime(vector<vector<int>> roads, vector<int> machines) {
                 m[roads[i][1]].push_back(roads[i][0]);
             }
         }
-        
+
         else if(!machPres[roads[i][0]] && machPres[roads[i][1]])
-        {            
+        {
             if(FindMachine(roads[i][0], m, machPres))
                 ans += roads[i][2];
             else
