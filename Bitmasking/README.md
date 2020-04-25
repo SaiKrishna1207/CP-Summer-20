@@ -11,3 +11,7 @@ https://codeforces.com/problemset/problem/1097/B
 ## (3) Vitamins : 
 
 https://codeforces.com/problemset/problem/1042/B
+
+## (4) Sequence : 
+
+https://codeforces.com/problemset/problem/743/B
