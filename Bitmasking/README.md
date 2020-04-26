@@ -19,3 +19,7 @@ https://codeforces.com/problemset/problem/743/B
 ## (5) Powers of 2 : 
 
 https://codeforces.com/problemset/problem/1095/C
+
+## (6) Problemset : 
+
+https://codeforces.com/problemset/problem/550/B
