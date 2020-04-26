@@ -15,3 +15,7 @@ https://codeforces.com/problemset/problem/1042/B
 ## (4) Sequence : 
 
 https://codeforces.com/problemset/problem/743/B
+
+## (5) Powers of 2 : 
+
+https://codeforces.com/problemset/problem/1095/C
