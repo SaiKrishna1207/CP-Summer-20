@@ -27,3 +27,7 @@ https://codeforces.com/problemset/problem/550/B
 ## (7) Sleep : 
 
 https://codeforces.com/problemset/problem/27/B
+
+## (8) New Year's Eve : 
+
+https://codeforces.com/problemset/problem/912/B
