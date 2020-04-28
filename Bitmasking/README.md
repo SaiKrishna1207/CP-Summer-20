@@ -23,3 +23,7 @@ https://codeforces.com/problemset/problem/1095/C
 ## (6) Problemset : 
 
 https://codeforces.com/problemset/problem/550/B
+
+## (7) Sleep : 
+
+https://codeforces.com/problemset/problem/27/B
