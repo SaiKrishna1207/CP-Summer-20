@@ -31,3 +31,7 @@ https://codeforces.com/problemset/problem/27/B
 ## (8) New Year's Eve : 
 
 https://codeforces.com/problemset/problem/912/B
+
+## (9) Good Array : 
+
+https://codeforces.com/problemset/problem/1270/C
