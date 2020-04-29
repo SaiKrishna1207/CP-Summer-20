@@ -35,3 +35,7 @@ https://codeforces.com/problemset/problem/912/B
 ## (9) Good Array : 
 
 https://codeforces.com/problemset/problem/1270/C
+
+## (10) Bacteria : 
+
+https://codeforces.com/problemset/problem/579/A
