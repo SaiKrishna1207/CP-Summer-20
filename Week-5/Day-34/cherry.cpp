@@ -22,23 +22,23 @@ public:
                         dp[j][k] = -1;
                         continue;
                     }   
-                    int best = -1, delta = grid[a][j];
+                    int x = -1, d = grid[a][j];
                     if (j != k)
-                        delta += grid[b][k];
+                        d += grid[b][k];
                     
                     if (j > 0 && k > 0 && dp[j - 1][k - 1] >= 0) 
-                        best = max(best, dp[j - 1][k - 1] + delta);
+                        x = max(x, dp[j - 1][k - 1] + d);
                     
                     if (j > 0 && b > 0 && dp[j - 1][k] >= 0) 
-                        best = max(best, dp[j - 1][k] + delta);
+                        x = max(x, dp[j - 1][k] + d);
                     
                     if (a > 0 && k > 0 && dp[j][k - 1] >= 0) 
-                        best = max(best, dp[j][k - 1] + delta);
+                        x = max(x, dp[j][k - 1] + d);
                     
                     if (a > 0 && b > 0 && dp[j][k] >= 0)
-                        best = max(best, dp[j][k] + delta);
+                        x = max(x, dp[j][k] + d);
                     
-                    dp[j][k] = best;
+                    dp[j][k] = x;
                 }
             }
         }
