@@ -11,3 +11,8 @@ https://www.interviewbit.com/problems/longest-palindromic-substring/
 ## (3) Good Nodes : (LeetCode)
 
 https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+
+
+## (4) Maximum Common Subarray : (LeetCode)
+
+https://leetcode.com/problems/maximum-length-of-repeated-subarray/
