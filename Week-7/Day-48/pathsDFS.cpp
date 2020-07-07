@@ -4,7 +4,7 @@ public:
     int ans = 0, zeros = 0;
 
     void dfs(vector<vector<int>> grid, int r, int c, int count){
-        if(r >= grid.size() || r < 0 || c >= grid[r].size() || c < 0 || grid[r][c] == -1 || visited[r][c])
+        if(grid[r][c] == -1)
             return;
         
         if(grid[r][c] == 2){
@@ -15,10 +15,14 @@ public:
         count++;
         visited[r][c] = true;
         
-        dfs(grid, r + 1, c, count);
-        dfs(grid, r - 1, c, count);
-        dfs(grid, r, c + 1, count);
-        dfs(grid, r, c - 1, count);
+        if(r + 1 < grid.size() && !visited[r + 1][c])
+            dfs(grid, r + 1, c, count);
+        if(r - 1 >= 0 && !visited[r - 1][c])
+            dfs(grid, r - 1, c, count);
+        if(c + 1 < grid[r].size() && !visited[r][c + 1])
+            dfs(grid, r, c + 1, count);
+        if(c - 1 >= 0 && !visited[r][c - 1])
+            dfs(grid, r, c - 1, count);
         
         visited[r][c] = false;
         count--;
