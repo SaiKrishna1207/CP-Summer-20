@@ -8,7 +8,7 @@ https://codeforces.com/problemset/problem/1201/C
 
 https://codeforces.com/problemset/problem/1389/C
 
-## (3) Max heaps : (Interviewbit)
+## (3) Max heaps : (Interviewbit) (code is too much ffs..logic is fine)
 
 https://www.interviewbit.com/problems/ways-to-form-max-heap/
 
