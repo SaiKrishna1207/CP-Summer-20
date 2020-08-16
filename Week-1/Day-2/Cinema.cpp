@@ -8,7 +8,7 @@ using namespace std;
 void solve(vector<int> money, int n)
 {
     int i, j, balance50 = 0, balance25 = 0, balance100 = 0, flag = 0;
-    if(money[i] != 25)
+    if(money[0] != 25)
     {
         cout << "NO" << endl;
         return;
